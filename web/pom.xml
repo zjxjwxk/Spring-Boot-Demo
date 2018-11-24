@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <parent>
+    <artifactId>first-spring-boot</artifactId>
+    <groupId>com.imooc</groupId>
+    <version>0.0.1-SNAPSHOT</version>
+  </parent>
+  <modelVersion>4.0.0</modelVersion>
+
+  <artifactId>web</artifactId>
+  <!-- 将packaging值（默认：jar）调整成war -->
+  <packaging>war</packaging>
+
+  <dependencies>
+
+    <!-- web依赖于persistence -->
+    <!-- persistence依赖于model -->
+    <!-- 增加persistence依赖 -->
+    <dependency>
+      <groupId>com.imooc</groupId>
+      <artifactId>persistence</artifactId>
+      <version>0.0.1-SNAPSHOT</version>
+    </dependency>
+  </dependencies>
+
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-maven-plugin</artifactId>
+        <configuration>
+          <mainClass>com.imooc.firstspringboot.FirstSpringBootApplication</mainClass>
+        </configuration>
+      </plugin>
+    </plugins>
+  </build>
+
+</project>
